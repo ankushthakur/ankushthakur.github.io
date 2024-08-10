@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Detection</title>
+</head>
+<body>
+    <script>
+        function detectDevice() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isTablet = /tablet|ipad|playbook|silk/.test(userAgent);
+            const isMobile = /mobile|android|iphone|ipod/.test(userAgent);
+            const isLaptop = !isTablet && !isMobile;
+
+            if (isTablet) {
+                window.location.href = "tablet.html"; // URL for tablet
+            } else if (isLaptop) {
+                window.location.href = "laptop.html"; // URL for laptop
+            } else {
+                window.location.href = "mobile.html"; // URL for mobile devices
+            }
+        }
+
+        detectDevice();
+    </script>
+</body>
+</html>
