@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Device Detection</title>
-</head>
+    <head>
+        <title>Device Detection</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    
+            body {
+                background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                text-align: center;
+            }
+            #detectButton {
+                padding: 20px 40px;
+                font-size: 20px;
+                color: white;
+                background-color: #ff6f61; /* Trendy coral color for the button */
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s, transform 0.3s;
+                margin-top: 20px;
+            }
+            #detectButton:hover {
+                background-color: #ff3b2f; /* Darker coral on hover */
+                transform: scale(1.05);
+            }
+            #detectButton:active {
+                transform: scale(1);
+            }
+            .published-text {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
 <body>
+    <body>
+        <div class="published-text">This page is authored by Ankush Thakur.</div>
+        <div class="published-text">Click the button below to identify the hardware from which this URL was launched.</div>
+        <button id="detectButton">Detect Device</button>
+
     <script>
         function detectDevice() {
             const userAgent = navigator.userAgent.toLowerCase();
@@ -20,7 +65,7 @@
             }
         }
 
-        detectDevice();
+        document.getElementById("detectButton").addEventListener("click", detectDevice);
     </script>
 </body>
 </html>
