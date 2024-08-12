@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tablet Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Detection</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            max-width: 30%;
+            height: auto;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>This is a Tablet</h1>
+    <img src="https://images.pexels.com/photos/5088023/pexels-photo-5088023.jpeg" alt="Tablet Image">
+    <div class="message">You open this URL from a TABLET</div>
 </body>
 </html>
